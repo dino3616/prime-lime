@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  background: #313E50;
+}
+
+h1 {
+  color: #282936;
+}
+
+.text_input_container {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.text_input_container input[type=text] {
+  display: inline-block;
+  width: 500px;
+  height: 40px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 10px 10px 180px;
+  transition: all 0.1s ease-out;
+}
+.text_input_container input[type=text] + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  border-radius: 3px 0 0 3px;
+  padding: 0 20px;
+  background: #E03616;
+  transform: translateZ(0) translateX(0);
+  transition: all 0.3s ease-in;
+  transition-delay: 0.2s;
+}
+.text_input_container input[type=text]:focus + label {
+  transform: translateY(-120%) translateX(0%);
+  border-radius: 3px;
+  transition: all 0.1s ease-out;
+}
+.text_input_container input[type=text]:focus {
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+
+#button_container {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.Run {
+  width: 12rem;
+  height: auto;
+}
+button.Run .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.Run .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.Run .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.Run .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.Run .button_text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button_text {
+  color: #fff;
+}
+
+.prime {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.run_time {
+  margin-top: 100px;
+  text-align: center;
+}
